@@ -1,0 +1,12 @@
+{
+  "app_name": "app",
+  "project_slug": "universal_mcp_{{ cookiecutter.app_name.replace('-', '_').lower() }}",
+  "project_name": "{{ cookiecutter.app_name.replace('-', ' ') }}",
+  "package_name": "{{ cookiecutter.app_name.replace('-', '_') }}",
+  "app_class_name": "{{ cookiecutter.app_name.capitalize() }}App",
+  "integration_type": ["oauth", "api_key", "none"],
+  "author_name": "Your Name",
+  "author_email": "you@agentr.dev",
+  "version": "0.1.0",
+  "python_version": "3.11"
+}
