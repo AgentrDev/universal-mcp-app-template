@@ -4,7 +4,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "{{ cookiecutter.project_slug }}"
+name = "{{ cookiecutter.app_name }}"
 version = "{{ cookiecutter.version }}"
 description = "A Universal MCP Application: {{ cookiecutter.project_name }}"
 readme = "README.md"
@@ -35,6 +35,9 @@ dev = [
     "ruff",
     "pre-commit", # Recommended for git hooks
 ]
+
+[project.scripts]
+{{cookiecutter.project_slug}} = "{{cookiecutter.project_slug}}:main"
 
 [project.urls]
 Homepage = "" # Add project URL later

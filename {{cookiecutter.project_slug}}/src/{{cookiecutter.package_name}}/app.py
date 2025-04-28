@@ -1,4 +1,3 @@
-# Jinja template: {{cookiecutter.project_slug}}/src/{{cookiecutter.package_name}}/app.py
 from universal_mcp.applications import APIApplication
 from universal_mcp.integrations import Integration
 
