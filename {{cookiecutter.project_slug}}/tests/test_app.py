@@ -1,3 +1,5 @@
+from unittest.mock import MagicMock
+
 import pytest
 
 from {{ cookiecutter.package_name }}.app import {{ cookiecutter.app_class_name }}
@@ -5,9 +7,12 @@ from {{ cookiecutter.package_name }}.app import {{ cookiecutter.app_class_name }
 @pytest.fixture
 def app_instance():
     """Provides a {{ cookiecutter.app_class_name }} instance for tests."""
-    return {{ cookiecutter.app_class_name }}()
+    mock_integration = MagicMock()
+    mock_integration.get_credentials.return_value = {"access_token": "dummy_access_token"}
 
-def test_zenquotes_app_initialization(app_instance):
+    return {{ cookiecutter.app_class_name }}(integration=mock_integration)
+
+def test_{{ cookiecutter.app_name }}_app_initialization(app_instance):
     """
     Test that the {{ cookiecutter.app_class_name }} instance is initialized correctly with a name.
     """
@@ -17,7 +22,7 @@ def test_zenquotes_app_initialization(app_instance):
     assert app_instance.name == "{{ cookiecutter.app_name }}", "{{ cookiecutter.app_class_name }} instance has unexpected name."
 
 
-def test_zenquotes_tool_docstrings_format(app_instance):
+def test_{{ cookiecutter.app_name }}_tool_docstrings_format(app_instance):
     """
     Test that each tool method in {{ cookiecutter.app_class_name }} has a well-formatted docstring,
     including summary, Args, Returns, and Tags sections.
@@ -42,14 +47,13 @@ def test_zenquotes_tool_docstrings_format(app_instance):
 
         # Check for specific sections (case-insensitive and strip whitespace)
         docstring_lower = docstring.lower()
-        # assert "args:" in docstring_lower, f"Docstring for '{tool_name}' is missing 'Args:' section."
+        assert "args:" in docstring_lower, f"Docstring for '{tool_name}' is missing 'Args:' section."
         assert "returns:" in docstring_lower, f"Docstring for '{tool_name}' is missing 'Returns:' section."
-        # Check for 'Raises' section (optional check based on your requirement)
         assert "raises:" in docstring_lower, f"Docstring for '{tool_name}' is missing 'Raises:' section."
         assert "tags:" in docstring_lower, f"Docstring for '{tool_name}' is missing 'Tags:' section."
 
 
-def test_zenquotes_tools_are_callable(app_instance):
+def test_{{ cookiecutter.app_name }}_tools_are_callable(app_instance):
     """
     Test that each tool method returned by list_tools in {{ cookiecutter.app_class_name }} is callable.
     """
