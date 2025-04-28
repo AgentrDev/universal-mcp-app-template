@@ -41,7 +41,7 @@ The generated project has a standard layout:
 ├── src/                  # Source code directory
 │   └── {{cookiecutter.app_name }}/
 │       ├── __init__.py
-│       └── mcp.py        # Server is launched here
+│       └──   mcp.py      # Server is launched here
 │       └──   app.py      # Application tools are defined here
 ├── tests/                # Directory for project tests
 ├── .env                  # Environment variables (for local development)
