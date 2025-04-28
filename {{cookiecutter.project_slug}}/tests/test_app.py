@@ -19,7 +19,7 @@ def test_{{ cookiecutter.package_name }}_app_initialization(app_instance):
     assert hasattr(app_instance, 'name'), "Application instance should have a 'name' attribute."
     assert isinstance(app_instance.name, str), "Application name should be a string."
     assert app_instance.name.strip() != "", "Application name should not be empty."
-    assert app_instance.name == "{{ cookiecutter.package_name }}", "{{ cookiecutter.app_class_name }} instance has unexpected name."
+    assert app_instance.name == "{{ cookiecutter.app_name }}", "{{ cookiecutter.app_class_name }} instance has unexpected name."
 
 
 def test_{{ cookiecutter.package_name }}_tool_docstrings_format(app_instance):
