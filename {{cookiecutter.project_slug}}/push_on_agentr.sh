@@ -5,7 +5,7 @@
 
 # --- Configuration ---
 ORG_NAME="AgentrDev"
-REPO_NAME="universal-mcp-{{ cookiecutter.project_name }}"
+REPO_NAME="universal-mcp-{{ cookiecutter.package_name }}"
 VISIBILITY="private" # Or 'public' or 'internal' as needed
 
 # --- Script ---

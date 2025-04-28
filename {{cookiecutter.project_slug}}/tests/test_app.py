@@ -12,17 +12,17 @@ def app_instance():
 
     return {{ cookiecutter.app_class_name }}(integration=mock_integration)
 
-def test_{{ cookiecutter.app_name }}_app_initialization(app_instance):
+def test_{{ cookiecutter.package_name }}_app_initialization(app_instance):
     """
     Test that the {{ cookiecutter.app_class_name }} instance is initialized correctly with a name.
     """
     assert hasattr(app_instance, 'name'), "Application instance should have a 'name' attribute."
     assert isinstance(app_instance.name, str), "Application name should be a string."
     assert app_instance.name.strip() != "", "Application name should not be empty."
-    assert app_instance.name == "{{ cookiecutter.app_name }}", "{{ cookiecutter.app_class_name }} instance has unexpected name."
+    assert app_instance.name == "{{ cookiecutter.package_name }}", "{{ cookiecutter.app_class_name }} instance has unexpected name."
 
 
-def test_{{ cookiecutter.app_name }}_tool_docstrings_format(app_instance):
+def test_{{ cookiecutter.package_name }}_tool_docstrings_format(app_instance):
     """
     Test that each tool method in {{ cookiecutter.app_class_name }} has a well-formatted docstring,
     including summary, Args, Returns, and Tags sections.
@@ -53,7 +53,7 @@ def test_{{ cookiecutter.app_name }}_tool_docstrings_format(app_instance):
         assert "tags:" in docstring_lower, f"Docstring for '{tool_name}' is missing 'Tags:' section."
 
 
-def test_{{ cookiecutter.app_name }}_tools_are_callable(app_instance):
+def test_{{ cookiecutter.package_name }}_tools_are_callable(app_instance):
     """
     Test that each tool method returned by list_tools in {{ cookiecutter.app_class_name }} is callable.
     """
