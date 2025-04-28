@@ -27,7 +27,7 @@ source .venv/bin/activate
 ### 3. Start the MCP Inspector
 Use the MCP CLI to start the application in development mode.
 ```bash
-mcp dev src/{{cookiecutter.app_name}}/__main__.py
+mcp dev src/{{cookiecutter.app_name}}/mcp.py
 ```
 The MCP inspector should now be running. Check the console output for the exact address and port.
 ---
@@ -41,7 +41,7 @@ The generated project has a standard layout:
 ├── src/                  # Source code directory
 │   └── {{cookiecutter.app_name }}/
 │       ├── __init__.py
-│       └── __main__.py   # Server is launched here
+│       └── mcp.py        # Server is launched here
 │       └──   app.py      # Application tools are defined here
 ├── tests/                # Directory for project tests
 ├── .env                  # Environment variables (for local development)

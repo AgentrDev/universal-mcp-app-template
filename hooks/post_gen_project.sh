@@ -27,16 +27,16 @@ echo "Note: Files will NOT be pushed automatically. You will need to run 'git pu
 
 # Create the private GitHub repository and set the remote, but DO NOT push
 # Assumes gh CLI is installed and authenticated
-# Using --source . links the current directory to the new repo and automatically sets the origin remote
-gh repo create "${ORG_NAME}/${REPO_NAME}" --private --source . --remote origin
+# # Using --source . links the current directory to the new repo and automatically sets the origin remote
+# gh repo create "${ORG_NAME}/${REPO_NAME}" --private --source . --remote origin
 
-# Rename the default branch to master locally if it's currently 'main'
-# Check if the current branch is 'main' and rename it to 'master'
-CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
-if [ "$CURRENT_BRANCH" = "main" ]; then
-    echo "Renaming local branch 'main' to '$BRANCH_NAME'..."
-    git branch -M "$BRANCH_NAME"
-fi
+# # Rename the default branch to master locally if it's currently 'main'
+# # Check if the current branch is 'main' and rename it to 'master'
+# CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+# if [ "$CURRENT_BRANCH" = "main" ]; then
+#     echo "Renaming local branch 'main' to '$BRANCH_NAME'..."
+#     git branch -M "$BRANCH_NAME"
+# fi
 
-echo "GitHub repository created and remote 'origin' set successfully."
-echo "You can now make changes, commit, and push using 'git push -u origin master'."
+# echo "GitHub repository created and remote 'origin' set successfully."
+# echo "You can now make changes, commit, and push using 'git push -u origin master'."
