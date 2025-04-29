@@ -1,4 +1,4 @@
-Welcome to the **{{ cookiecutter.project_slug.upper() }}**
+Welcome to the **Universal MCP {{ cookiecutter.app_name.capitalize()}} API**.
 This project provides a starting point for your API application, generated automatically by **MCP CLI** to help you kickstart your development quickly.
 ---
 ## 📋 Prerequisites
