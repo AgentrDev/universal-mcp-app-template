@@ -1,7 +1,7 @@
 {
   "app_name": "app",
   "project_slug": "universal_mcp_{{ cookiecutter.app_name.replace('-', '_').lower() }}",
-  "app_class_name": "{{ cookiecutter.app_name.capitalize() }}App",
+  "app_class_name": "{{ app_name.split('-') | map('title') | join('') }}App",
   "integration_type": ["agentr", "api_key", "none"],
   "author_name": "Manoj Bajaj",
   "author_email": "manoj@agentr.dev",
