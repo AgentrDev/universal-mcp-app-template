@@ -4,7 +4,6 @@
 set -e
 
 # Get the project slug which is the folder name relative to the output directory
-PROJECT_SLUG="{{ cookiecutter.project_slug }}"
 APP_NAME="{{ cookiecutter.app_name }}"
 ORG_NAME="AgentrDev" # Organization name
 # REPO_NAME will be universal-mcp-<app_name> based on cookiecutter.json
