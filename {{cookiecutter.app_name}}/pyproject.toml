@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 [project]
 name = "{{ cookiecutter.project_slug }}"
 version = "{{ cookiecutter.version }}"
-description = "A Universal MCP Application: {{ cookiecutter.project_name }}"
+description = "A Universal MCP Application: {{ cookiecutter.project_slug }}"
 readme = "README.md"
 requires-python = ">={{ cookiecutter.python_version }}"
 license = { text = "MIT" } # Or choose another default license
