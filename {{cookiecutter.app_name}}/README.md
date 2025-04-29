@@ -1,4 +1,4 @@
-Welcome to the **{{ cookiecutter.project_slug.upper() }}** API
+Welcome to the **{{ cookiecutter.project_slug.upper() }}**
 This project provides a starting point for your API application, generated automatically by **MCP CLI** to help you kickstart your development quickly.
 ---
 ## 📋 Prerequisites
