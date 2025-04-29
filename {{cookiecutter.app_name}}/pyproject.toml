@@ -4,7 +4,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "{{ cookiecutter.app_name }}"
+name = "{{ cookiecutter.project_slug }}"
 version = "{{ cookiecutter.version }}"
 description = "A Universal MCP Application: {{ cookiecutter.project_name }}"
 readme = "README.md"
@@ -45,7 +45,7 @@ Repository = "" # Add repository URL later
 
 # --- Hatch Configuration ---
 [tool.hatch.version]
-path = "src/{{ cookiecutter.package_name }}/__init__.py"
+path = "src/{{ cookiecutter.project_slug }}/__init__.py"
 
 [tool.hatch.envs.default]
 dependencies = [
@@ -54,13 +54,13 @@ dependencies = [
 ]
 [tool.hatch.envs.default.scripts]
 test = "pytest {args:tests}"
-test-cov = "pytest --cov-report term-missing --cov-config=pyproject.toml --cov=src/{{ cookiecutter.package_name }} --cov=tests {args:tests}"
+test-cov = "pytest --cov-report term-missing --cov-config=pyproject.toml --cov=src/{{ cookiecutter.project_slug }} --cov=tests {args:tests}"
 lint = "ruff check . && ruff format --check ." # Check formatting and lint
 format = "ruff format ." # Apply formatting
 
 # Configure pytest coverage
 [tool.coverage.run]
-source = ["src/{{ cookiecutter.package_name }}"]
+source = ["src/{{ cookiecutter.project_slug }}"]
 branch = true
 
 [tool.coverage.report]

@@ -1,4 +1,4 @@
-Welcome to the **{{ cookiecutter.app_name.upper() }}** API
+Welcome to the **{{ cookiecutter.project_slug.capitalize() }}** API
 This project provides a starting point for your API application, generated automatically by **MCP CLI** to help you kickstart your development quickly.
 ---
 ## 📋 Prerequisites
@@ -27,7 +27,7 @@ source .venv/bin/activate
 ### 3. Start the MCP Inspector
 Use the MCP CLI to start the application in development mode.
 ```bash
-mcp dev src/{{cookiecutter.app_name}}/mcp.py
+mcp dev src/{{cookiecutter.project_slug}}/mcp.py
 ```
 The MCP inspector should now be running. Check the console output for the exact address and port.
 ---
@@ -39,7 +39,7 @@ The generated project has a standard layout:
 ```
 .
 ├── src/                  # Source code directory
-│   └── {{cookiecutter.app_name }}/
+│   └── {{cookiecutter.project_slug }}/
 │       ├── __init__.py
 │       └──   mcp.py      # Server is launched here
 │       └──   app.py      # Application tools are defined here

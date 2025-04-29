@@ -8,10 +8,10 @@ PROJECT_SLUG="{{ cookiecutter.project_slug }}"
 APP_NAME="{{ cookiecutter.app_name }}"
 ORG_NAME="AgentrDev" # Organization name
 # REPO_NAME will be universal-mcp-<app_name> based on cookiecutter.json
-REPO_NAME="universal-mcp-${APP_NAME}"
+REPO_NAME="${APP_NAME}"
 BRANCH_NAME="master" # Desired initial branch name
 
-echo "Initializing git repository in $PROJECT_SLUG..."
+echo "Initializing git repository in $APP_NAME..."
 
 # Initialize a new Git repository
 git init
