@@ -1,5 +1,5 @@
 {
-  "app_name": "app",
+  "app_name": "app.lower()",
   "project_slug": "universal_mcp_{{ cookiecutter.app_name.replace('-', '_').lower() }}",
   "app_class_name": "{{ cookiecutter.app_name.split('-') | map('title') | join('') }}",
   "integration_type": [
