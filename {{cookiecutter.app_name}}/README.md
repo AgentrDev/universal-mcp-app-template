@@ -72,7 +72,8 @@ Follow the steps below to set up your development environment:
 │   └── {{cookiecutter.project_slug }}/
 │       ├── __init__.py       # Package initializer
 │       ├── mcp.py            # Server entry point
-│       └── app.py            # Application tools
+│       ├── app.py            # Application tools
+│       └── README.md         # List of application tools
 ├── tests/                    # Test suite
 ├── .env                      # Environment variables for local development
 ├── pyproject.toml            # Project configuration
