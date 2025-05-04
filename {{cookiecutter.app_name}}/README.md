@@ -14,7 +14,7 @@ If you have not used universal mcp before follow the setup instructions at [agen
 
 ## Available Tools
 
-The full list of available tools is at [./src/universal_mcp_{{ cookiecutter.app_name.capitalize()}}/README.md](./src/universal*mcp*{{ cookiecutter.app_name.capitalize()}}/README.md)
+The full list of available tools is at [./src/{{cookiecutter.project_slug }}/README.md](./src/{{cookiecutter.project_slug }}/README.md)
 
 ## Local Development
 
