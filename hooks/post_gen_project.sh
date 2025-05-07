@@ -21,7 +21,7 @@ git add .
 # Make the initial commit
 git commit -m "feat: Initial commit from MCP CLI init command"
 
-echo "Creating GitHub repository ${ORG_NAME}/${REPO_NAME} as private and setting it as the origin remote..."
+echo "Creating GitHub repository ${ORG_NAME}/${REPO_NAME} as public and setting it as the origin remote..."
 echo "Note: Files will NOT be pushed automatically. You will need to run 'git push' manually later."
 
 # Create the private GitHub repository and set the remote, but DO NOT push
