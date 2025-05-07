@@ -1,5 +1,5 @@
 {% if cookiecutter.integration_type == "none" %}
-from universal_mcp.servers.server import SingleMCPServer
+from universal_mcp.servers import SingleMCPServer
 
 from {{ cookiecutter.project_slug }}.app import {{ cookiecutter.app_class_name }}
 
@@ -14,9 +14,9 @@ if __name__ == "__main__":
     mcp.run()
 
 {% elif cookiecutter.integration_type == "api_key" %}
-from universal_mcp.servers.server import SingleMCPServer
-from universal_mcp.integrations.integration import ApiKeyIntegration
-from universal_mcp.stores.store import EnvironmentStore
+from universal_mcp.servers import SingleMCPServer
+from universal_mcp.integrations import ApiKeyIntegration
+from universal_mcp.stores import EnvironmentStore
 
 from {{ cookiecutter.project_slug }}.app import {{ cookiecutter.app_class_name }}
 
@@ -32,9 +32,9 @@ if __name__ == "__main__":
     mcp.run()
 
 {% elif cookiecutter.integration_type == "agentr" %}
-from universal_mcp.servers.server import SingleMCPServer
-from universal_mcp.integrations.agentr import AgentRIntegration
-from universal_mcp.stores.store import EnvironmentStore
+from universal_mcp.servers import SingleMCPServer
+from universal_mcp.integrations import AgentRIntegration
+from universal_mcp.stores import EnvironmentStore
 
 from {{ cookiecutter.project_slug }}.app import {{ cookiecutter.app_class_name }}
 
