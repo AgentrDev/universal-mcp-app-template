@@ -4,7 +4,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "{{ cookiecutter.project_slug }}"
+name = "{{ cookiecutter.project_name }}"
 version = "{{ cookiecutter.version }}"
 description = "A Universal MCP Application: {{ cookiecutter.project_slug }}"
 readme = "README.md"
@@ -40,8 +40,8 @@ dev = [
 {{cookiecutter.project_slug}} = "{{cookiecutter.project_slug}}:main"
 
 [project.urls]
-Homepage = "" # Add project URL later
-Repository = "" # Add repository URL later
+Homepage = "https://github.com/universal-mcp/{{cookiecutter.app_name}}"
+Repository = "https://github.com/universal-mcp/{{cookiecutter.app_name}}"
 
 # --- Hatch Configuration ---
 [tool.hatch.version]
