@@ -44,8 +44,12 @@ sed -i '' "s/^version = \".*\"/version = \"$NEW_VERSION\"/" pyproject.toml
 
 echo "Version bumped from $CURRENT_VERSION to $NEW_VERSION"
 
+# Generate README for tools based on app.py
+echo "Generating tools README for src/{{cookiecutter.project_slug}}/app.py..."
+universal_mcp readme src/{{cookiecutter.project_slug}}/app.py
+
 # Stage the changed file
-git add pyproject.toml
+git add pyproject.toml src/{{cookiecutter.project_slug}}/README.md
 
 # Commit the change
 git commit -m "bump: version $CURRENT_VERSION → $NEW_VERSION"
