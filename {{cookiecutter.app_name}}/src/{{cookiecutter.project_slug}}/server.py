@@ -39,6 +39,7 @@ from universal_mcp.stores import EnvironmentStore
 from {{ cookiecutter.project_slug }}.app import {{ cookiecutter.app_class_name }}
 
 env_store = EnvironmentStore()
+# "name" used in AgentRIntegration should match the actual name from the backend
 integration_instance = AgentRIntegration(name="{{ cookiecutter.app_name.lower() }}", store=env_store)
 app_instance = {{ cookiecutter.app_class_name }}(integration=integration_instance)
 
